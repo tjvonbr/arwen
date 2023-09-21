@@ -1,11 +1,6 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Handjet } from "next/font/google";
-
-const handjet = Handjet({
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "ARWEN",
@@ -18,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={handjet.className}>
+    <html lang="en">
       <body>
         <Header />
         {children}

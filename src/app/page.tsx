@@ -1,8 +1,5 @@
-"use client";
-
+import { Cable, Code2, Terminal } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
-import { Icons } from "@/components/Icons";
-import { Service, services } from "@/config/services";
 import { heroCopy } from "@/utils/consts";
 
 export default function Home() {
@@ -29,27 +26,44 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-8 flex space-x-4">
-            {services.map((service: Service, idx: number) => {
-              const Icon = Icons[service.icon || "code"];
-
-              return (
-                <div
-                  key={idx}
-                  className="w-[400px] p-5 flex flex-col items-start space-y-2 bg-[#141414] rounded-md"
-                >
-                  <div
-                    className={`h-16 w-16 flex justify-center items-center rounded-full`}
-                    style={{ backgroundColor: `${service.color}` }}
-                  >
-                    <Icon size={25} color="#001eff" />
-                  </div>
-                  <div className="flex flex-col space-y-1">
-                    <p className="font-bold">{service.name}</p>
-                    <p className="text-zinc-400">{service.description}</p>
-                  </div>
-                </div>
-              );
-            })}
+            <div className="w-[400px] p-5 flex flex-col items-start space-y-2 bg-[#141414] rounded-md">
+              <div className="h-16 w-16 flex bg-blue-950 justify-center items-center rounded-full">
+                <Terminal size={25} color="#3b82f6" />
+              </div>
+              <div className="flex flex-col space-y-1">
+                <p className="font-bold">Web Design and Development</p>
+                <p className="text-zinc-400">
+                  We can redesign your landing page, build you a full-stack
+                  application, and anything in-between
+                </p>
+              </div>
+            </div>
+            <div className="w-[400px] p-5 flex flex-col items-start space-y-2 bg-[#141414] rounded-md">
+              <div
+                className={`h-16 w-16 flex justify-center items-center bg-purple-950 rounded-full`}
+              >
+                <Code2 size={25} color="#a855f7" />
+              </div>
+              <div className="flex flex-col space-y-1">
+                <p className="font-bold">Low-code/No-code Solutions</p>
+                <p className="text-zinc-400">
+                  Don&apos;t want to worry about maintaining your codebase? We
+                  provide low-code/no-code tool consulting
+                </p>
+              </div>
+            </div>
+            <div className="w-[400px] p-5 flex flex-col items-start space-y-2 bg-[#141414] rounded-md">
+              <div className="h-16 w-16 flex justify-center items-center rounded-full bg-pink-950">
+                <Cable size={25} color="#ec4899" />
+              </div>
+              <div className="flex flex-col space-y-1">
+                <p className="font-bold">Third-party API Integration</p>
+                <p className="text-zinc-400">
+                  Programatically send emails with Mailchimp or create a
+                  Slackbot that connects to your project management tooling
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

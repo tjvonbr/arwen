@@ -4,7 +4,6 @@ import ContactForm from "@/components/ContactForm";
 import { Icons } from "@/components/Icons";
 import { Service, services } from "@/config/services";
 import { heroCopy } from "@/utils/consts";
-import { join } from "tw-merge";
 
 export default function Home() {
   return (

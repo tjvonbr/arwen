@@ -15,8 +15,6 @@ export default function ContactForm() {
     request: "",
   });
 
-  console.log(inquiry);
-
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     let formData = { ...inquiry };
     formData[e.target.name as keyof Inquiry] = e.target.value;

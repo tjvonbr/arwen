@@ -9,7 +9,7 @@ export default function Arwen() {
   return (
     <Link
       href="/"
-      className={`text-2xl text-white font-black uppercase tracking-wide ${handjet.className}`}
+      className={`text-2xl text-foreground font-black uppercase tracking-wide ${handjet.className}`}
     >
       Arwen
     </Link>

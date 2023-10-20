@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 20, 20, 20;
+    --foreground: 232, 232, 232;
+    --foreground-secondary: 208, 208, 208;
+
+    --border: 67, 67, 67;
+  }
+
+  body {
+    background: rgb(var(--background));
+  }
+}
